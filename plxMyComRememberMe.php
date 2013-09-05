@@ -14,11 +14,11 @@ class plxMyComRememberMe extends plxPlugin {
 	 **/
 	public function __construct($default_lang) {
 
-        # appel du constructeur de la classe plxPlugin (obligatoire)
-        parent::__construct($default_lang);
+		# appel du constructeur de la classe plxPlugin (obligatoire)
+		parent::__construct($default_lang);
 
-        # déclaration des hooks
-        $this->addHook('plxMotorDemarrageNewCommentaire', 'plxMotorDemarrageNewCommentaire');
+		# déclaration des hooks
+		$this->addHook('plxMotorDemarrageNewCommentaire', 'plxMotorDemarrageNewCommentaire');
 		$this->addHook('plxMotorConstruct', 'plxMotorConstruct');
 		$this->addHook('IndexEnd', 'IndexEnd');
 
@@ -34,7 +34,7 @@ class plxMyComRememberMe extends plxPlugin {
 	public function IndexEnd() {
 
 		echo '<?php
-		$text = "<p class=\"rememberme\"><input type=\"checkbox\" id=\"id_rememberme\" name=\"rememberme\" value=\"1\" />&nbsp;'.$this->getLang('L_REMEMBER_ME').'</p>";
+		$text = "<div class=\"rememberme\"><input type=\"checkbox\" id=\"id_rememberme\" name=\"rememberme\" value=\"1\" />&nbsp;'.$this->getLang('L_REMEMBER_ME').'</div>";
 		$output = preg_replace("/<textarea.+name=[\'\"]content[\'\"](.*?)<\/textarea>/i", "$0".$text, $output);
 		?>';
 	}
@@ -47,7 +47,6 @@ class plxMyComRememberMe extends plxPlugin {
 	 *
 	 **/
 	public function plxMotorDemarrageNewCommentaire() {
-
 
 		$string = '
 		if(isset($_POST["rememberme"]) AND ($retour[0]=="c" OR $retour=="mod")) {

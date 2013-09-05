@@ -2,8 +2,8 @@
 <document>
 	<title><![CDATA[MyComRememberMe]]></title>
 	<author><![CDATA[Stephane F.]]></author>
-	<version>1.0</version>
-	<date>04/05/2012</date>
+	<version>1.1</version>
+	<date>05/09/2013</date>
 	<site>http://pluxopolis.net</site>
 	<description><![CDATA[Mémorise le nom, le site et l'adresse email du visiteur qui laisse un commentaire pour qu'il n'ait plus à les saisir]]></description>
 	<requirements></requirements>
